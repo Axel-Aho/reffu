@@ -1,0 +1,112 @@
+.row{
+    .flex_filter{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .filters{
+            margin: 5px;
+            width: 33%;
+            font-size: 1em;
+            padding: 14px 0px;
+                &:hover{
+                    background-color: $lightblue;
+                }
+                &:active{
+                    background-color: $lightblue;
+                }
+            @include ss(( xs )){
+                font-size: 0.8em;
+            }
+        }
+    }
+    .blog_area{
+        margin: auto;
+        display: flex;
+        flex-flow: row; 
+        flex-wrap: wrap;
+        
+        .blog_box{
+            min-width: 12rem;
+            .date{
+                color: $grey;
+            }
+            a{
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline black;
+       
+                }
+                .blog_img{
+                    background-size: cover;
+                    background-position: center;
+                    margin: 5px;
+                    height: 200px;
+
+                }
+                .blog_text{
+                    color: black;
+                    z-index: 6;
+                    h3{
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        transition: border-bottom 1s;
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    }
+    .info{
+        h2{
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+        #gform_wrapper_1{
+            #gform_1{
+                .gform_body{
+                    #gform_fields_1{
+                        // nimi kenttä
+                        #field_1_2{
+                            .gfield_label{
+                                font-weight: 400;
+                            }
+                        }
+                        // sposti
+                        #field_1_4{
+                            .gfield_label{
+                                font-weight: 400;
+                            }
+                            .ginput_container{
+                                #input_1_4{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        // palaute
+                        #field_1_3{
+                            .gfield_label{
+                                font-weight: 400;
+                                font-size: 1.2em;
+                            }
+                        }
+                    }
+                }
+                .gform_footer{
+                    #gform_submit_button_1{
+                        background-color: $pink;
+                        color: $white;
+                        font-size: 0.8em;
+                        border: none;
+                        padding: 10px;
+                        text-transform: uppercase;
+                        &:hover{
+                            background-color: $lightblue;
+                        }
+                    }
+                }
+    
+            } 
+        }
+    }
+}

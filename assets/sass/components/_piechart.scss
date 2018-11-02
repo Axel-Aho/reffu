@@ -1,0 +1,47 @@
+.pie_wrapper{
+    background-color: $pink;
+    height: 450px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    @include ss(( m, s, xs )){
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+    #chartContainer{
+        width: 100%; 
+        height: 370px;
+        margin-left: 40px;
+        margin-top: 40px;
+        @include ss(( m, s, xs )){
+            margin-right: 25px;
+            margin-left: 25px;
+            margin-top: 25px;
+        }
+        .canvasjs-chart-credit{
+            display: none;
+        }
+    } 
+    #pie_info{
+        width: 200px;
+        height: 370px;
+        background-color: #ffffff;
+        margin-top: 40px;
+        margin-right: 40px;
+        margin-left: 40px;
+        text-align: center;
+        @include ss(( m, s, xs )){
+            width: 100%;
+            height: 200px;
+            margin-right: 25px;
+            margin-left: 25px;
+            margin-top: 25px;
+        }
+        .row{
+            list-style: none;
+            padding-inline-start: 0px;
+        }
+    }
+}

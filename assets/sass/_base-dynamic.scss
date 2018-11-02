@@ -1,0 +1,19 @@
+// GW-WP Grid settings
+$max-width: 1200; // Page container max size
+$columns: 24; // Max column count
+$screen-sizes:"xs", "s", "m", "l", "xl"; // Named screen sizes
+$screen-min:0,480,768,992,1200; // Min widths for screen sizes
+$screen-max:479,767,991,1199,9999; // Max widths for screen sizes
+$gutter-type: 'dynamic';
+$column-gutter-ratio: 0.6;
+$column-width: percentage( $max-width/$columns*$column-gutter-ratio/$max-width ); // One column max width
+$gutter-width: percentage( $max-width/$columns*((1-$column-gutter-ratio)/2)/$max-width ); // One gutter max width
+
+// Select if you want to use reset or normalize
+@import "vendor/normalize"; // normalize.css v3.0.0 | MIT License | http://git.io/normalize
+// @import "vendor/reset";  // Meyer Web CSS reset v2.0 | Public domain | http://meyerweb.com/eric/tools/css/reset/
+
+
+// Import the GW-WP Grid system
+@import "gwwp-grid";
+@import "definitions";

@@ -1,0 +1,29 @@
+/*!
+Theme Name:G-Works WP Framework
+Theme URI:http://www.g-works.fi/
+Description: GW-WP Framework for WordPress themes
+Author:G-Works Oy
+Author URI:http://www.g-works.fi/
+Version: latest
+*/
+
+@import "base"; // Setup application base here
+@import "components";
+@import "wysiwyg";
+
+/* Application CSS */
+
+@import "general";
+
+@import "page/frontpage";
+@import "page/single";
+
+@import "layout/frontpage_header";
+@import "layout/frontpage_footer";
+@import "layout/single_header";
+
+@import "components/highlight";
+@import "components/article_archive";
+@import "components/blog_archive";
+@import "components/calendar";
+@import "components/piechart";

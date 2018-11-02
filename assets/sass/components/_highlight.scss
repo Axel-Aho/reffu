@@ -1,0 +1,43 @@
+.highlight{
+    background-color: $pink;
+    display: flex;
+    margin-bottom: 20px;
+    .icon{
+        background-color: $lightpink;
+        svg{
+            height: 100px;
+            width: 140px;
+            margin: 17px 0;
+            fill: $white;
+            @include ss(( s, xs )){
+                width: 100px;
+                height: 125px;
+            }
+        }
+    }
+    .content{
+        color: $white;
+        text-align: center;
+        flex-grow: 2;
+        .text{
+            margin-top: 35px;
+            h2{
+                text-transform: uppercase;
+                font-weight: 400;
+                margin-bottom: 13px;
+                @include ss(( s, xs )){
+                    font-size: 1.3em;
+                }
+            }
+        }
+        .link{
+            a{
+            text-decoration: none;
+            color: $white;
+            &:hover {
+                text-decoration: underline;	
+            }
+            }
+        }
+    }
+}

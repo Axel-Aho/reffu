@@ -1,0 +1,7 @@
+/**
+ * .wysiwyg targets your page and you should use it where TinyMce-editor content is showed
+ * #tinymce targets WP-TinyMce Editor
+ */
+@import "base";
+#tinymce,.wysiwyg{
+}

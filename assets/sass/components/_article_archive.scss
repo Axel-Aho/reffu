@@ -1,0 +1,300 @@
+.article_area{
+    //max-width: 1050px;
+    margin: auto;
+    display: flex;
+    flex-flow: row; 
+    flex-wrap: wrap;
+    justify-content: center;
+    a{
+      margin: 0 !important;
+    }
+    .col-8{
+      @include ss(( l, xl )){
+        width: calc(34.4% - 20px);
+        }
+      
+    }
+    .article_box_small, .shader, .article_text{
+      width: 100%;
+      height: 256px;
+
+    }
+    .article_box_small{
+        background-size: cover;
+        &:hover{
+			  .shader{
+				  background: $lightblue;
+				  opacity:0.8;
+			  }
+        }
+        .shader{
+            background-color: $grey;
+            background-size: cover;
+            opacity: 0.3;
+            position: absolute;
+            z-index: 5;
+        }
+
+        .article_text{
+            color: $white;
+            position: absolute;
+            z-index: 6;
+            text-align: center;
+            align-self: center;
+            h3{
+                font-weight: 400;
+                text-transform: uppercase;
+                @include ss(( l )){
+                    font-size: 1em;
+                    }
+            }
+        }
+    }
+
+    .article_box_big, .shader_big, .article_text_big{
+      width: 100%;
+      height: 256px;
+    }
+    .article_box_big{
+        background-size: cover;
+        &:hover{
+			    .shader_big{
+            background: $lightblue;
+            opacity:0.8;
+			    }
+        }
+
+        .shader_big{
+            background-color: $grey;
+            background-size: cover;
+            opacity: 0.3;
+            position: absolute;
+            z-index: 5;
+        }
+        .article_text_big{
+            color: $white;
+            position: absolute;
+            z-index: 6;
+            text-align: center;
+            h3{
+                font-weight: 400;
+                text-transform: uppercase;
+                @include ss(( l )){
+                    font-size: 1em;
+                    }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+/*Basic Grid Styles*/
+.Grid {
+    display: flex;
+    flex-flow: row; 
+    flex-wrap: wrap;
+  }
+  .u-textCenter {
+   text-align: center;
+  }
+  .Grid-cell {
+    flex: 1;
+  }
+  .big{
+      flex-grow: 2;
+      background-size: cover;
+        height: 250px;
+  }
+  .small{
+    max-width: 350px;
+    background-size: cover;
+    height: 250px;
+}
+  
+  .Demo {
+   //padding: .8em 1em 0;
+    //background: lightgrey;
+    transition: background-color 0.3s ease;
+    border: 1px solid grey;
+    height: 250px;
+    &:after {
+      content: "";
+      display: block;
+      margin-top: .8em;
+      height: 1px;
+     }
+    &:hover {
+    //  background: grey;
+    }
+  }
+  
+  
+  
+  // Grid Style Modifiers
+  
+  /* With gutters*/
+  $gutter: 1em;
+  .Grid--gutters {
+    
+    .Grid-cell {
+      
+    }
+    .Grid--nested {
+      .Grid-cell:first-of-type {
+        .Demo {
+          margin-right: 1em;
+        }
+      }
+    }  
+  }
+  
+  
+  
+  
+  /* Justify per row*/
+  .Grid--right {
+    justify-content: flex-end;
+  }
+  .Grid--center {
+    justify-content: center;
+  }
+   
+  /* Alignment per row */
+  .Grid--top {
+    align-items: flex-start;
+  }
+  .Grid--bottom {
+    align-items: flex-end;
+  }
+  .Grid--center {
+    align-items: center;
+  }
+  
+  /* Alignment per cell */
+  .Grid-cell--top {
+    align-self: flex-start;
+  }
+  .Grid-cell--bottom {
+    align-self: flex-end;
+  }
+  .Grid-cell--center {
+    align-self: center;
+  }
+  
+  
+  
+  /*===========================================*/
+  /* Base classes for all media - Mobile first */
+  .Grid--cols-2 > .Grid-cell {
+    flex: 0 0 100%; 
+  }
+  
+  .Grid--cols-3 > .Grid-cell {
+    flex: 0 0 100%; 
+  }
+  
+  .Grid--cols-4 > .Grid-cell {
+    flex: 0 0 100%;
+  }
+  
+  .Grid--cols-6 > .Grid-cell {
+    flex: 0 0 calc(50% - #{$gutter}); 
+  }
+  
+  .Grid--cols-12 > .Grid-cell {
+    flex: 0 0 calc(33.3333% - #{$gutter}); 
+  }
+  
+  .Grid--holly-grail {
+    .aside, .main {
+      flex: 1 100%;
+    }
+  }
+  
+  /* One of -- columns*/
+  .Grid--1of2 > .Grid-cell,
+  .Grid--1of4 > .Grid-cell:first-of-type,
+  .Grid--1of3 > .Grid-cell:first-of-type{
+    flex: 0 0 100%;
+  }
+  .Grid--1of6 > .Grid-cell:first-of-type {
+    flex: 0 0 50%;
+  }
+  
+  .Grid--fit > .Grid-cell {
+    flex: 1;
+  }
+  .Grid--full > .Grid-cell {
+    flex: 0 0 100%;
+  }
+  
+  /* Tablet (medium) screens */
+  @media (min-width: 30em) {
+    .Grid--cols-4 > .Grid-cell {
+      flex: 0 0 calc(50% - #{$gutter});     
+    }
+    .Grid--cols-6 > .Grid-cell {
+      flex: 0 0 calc(33.3333% - #{$gutter});  
+    }
+    .Grid--cols-12 > .Grid-cell {
+      flex: 0 0 calc(16.6666% - #{$gutter});  
+    }
+    .Grid--holly-grail {
+      .aside {
+        flex: 1 calc(25% - #{$gutter});
+      }
+    }
+    .Grid--1of2 > .Grid-cell {
+      flex: 0 0 50%;
+    }
+    .Grid--1of6 > .Grid-cell:first-of-type {
+      flex: 0 0 30%;
+    }
+    .Grid--1of4 > .Grid-cell:first-of-type {
+      flex: 0 0 50%;
+    }
+    .Grid--1of3 > .Grid-cell:first-of-type {
+      flex: 0 0 100%;
+    }
+  }
+  
+  /* Large screens */
+  @media (min-width: 48em) {
+    .Grid--cols-2 > .Grid-cell,
+    .Grid--cols-3 > .Grid-cell,
+    .Grid--cols-4 > .Grid-cell,
+    .Grid--cols-6 > .Grid-cell,
+    .Grid--cols-12 > .Grid-cell{
+      flex: 1;  
+    }
+    .Grid--holly-grail {
+      .main    { flex: 2; }
+      .aside   { flex: 1; }
+      .aside-1 { order: 1; } 
+      .main    { order: 2; }
+      .aside-2 { order: 3; }
+    }
+    .Grid--1of2 > .Grid-cell {
+      flex: 0 0 50%;
+    }
+    .Grid--1of6 > .Grid-cell:first-of-type {
+      flex: 0 0 16.6666%;
+    }
+    .Grid--1of4 > .Grid-cell:first-of-type {
+      flex: 0 0 25%;
+    }
+    .Grid--1of3 > .Grid-cell:first-of-type {
+      flex: 0 0 30%;
+    }
+    .Grid--gutters.Grid--nested {
+      .Grid-cell:first-of-type {
+        .Demo {
+          margin-right: 0;
+        }
+      }
+    }
+  }

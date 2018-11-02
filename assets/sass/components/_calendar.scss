@@ -1,0 +1,73 @@
+.calendar{
+    background-color: $blue;
+    h1{
+        text-align: center;
+        color: $white;
+        padding-top: 10px;
+    }
+    .calendar_wrapper{
+        min-height: 270px;
+        margin: 20px 0;
+        display: flex;
+        flex-direction: row;
+        @include ss(( m, s, xs )){
+            flex-direction: column;
+            justify-content: center;
+        }
+        #wp-calendar{
+            width: 255px;
+            height: 220px;
+            color: white;
+            margin-left: 5%;
+            text-align: center;
+            @include ss(( m, s, xs )){
+                margin: auto;
+            }
+            caption{
+                padding-top: 15px;
+                padding-bottom: 5px;
+            }
+            a{
+                text-decoration: none;
+                color: $pink;
+                border: 1px solid;
+                padding: 2px;
+            }
+            #today{
+                text-decoration: underline $pink;
+            }
+            .toggle{
+                color: $lightblue;
+            }
+            .disabled{
+                color: $pink;
+            }
+        }
+        #date{
+            color: $white;
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            flex-grow: 2;
+            @include ss(( m, s, xs )){
+                margin-left: 25px;
+                margin-right: 25px;
+            }
+            .card{
+                border: 1px solid $pink;
+                min-height: 200px;
+                .calendar_item{
+                    max-width: 567px;
+                    h3{
+                        margin-left: 10px;
+                    }
+                    p{
+                        margin-left: 10px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
