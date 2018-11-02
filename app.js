@@ -16,13 +16,13 @@ function setConsentCookie(){
 	expDate.setFullYear(expDate.getFullYear() + 1);
 	document.cookie = "gwwp_cookie_consent=true; path=/; expires=" + expDate.toGMTString();
 }
-}).call(this,require("rH1JPG"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../plugins/gwwp-mvc/libs/js/gwwp-cookie.js","/../../../../plugins/gwwp-mvc/libs/js")
+}).call(this,require("rH1JPG"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../plugins/plugin/libs/js/gwwp-cookie.js","/../../../../plugins/plugin/libs/js")
 },{"buffer":7,"jquery":9,"rH1JPG":10}],2:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
 require('gwwp-cookie');
-}).call(this,require("rH1JPG"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../plugins/gwwp-mvc/libs/js/gwwp.js","/../../../../plugins/gwwp-mvc/libs/js")
+}).call(this,require("rH1JPG"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../../../plugins/plugin/libs/js/gwwp.js","/../../../../plugins/plugin/libs/js")
 },{"buffer":7,"gwwp-cookie":1,"rH1JPG":10}],3:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
